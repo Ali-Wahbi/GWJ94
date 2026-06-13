@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://ri2b45imm1kb" path="res://assets/ui/trash-panel/trash.png" id="2_ry10k"]
 [ext_resource type="Texture2D" uid="uid://dhd6c0wp3qgce" path="res://assets/ui/trash-panel/progress-bar-empty.png" id="3_8hbl0"]
 [ext_resource type="Texture2D" uid="uid://dip5uji40k104" path="res://assets/ui/trash-panel/trash-progress-barl.png" id="4_s04da"]
+[ext_resource type="Texture2D" uid="uid://bipusb6abm43v" path="res://assets/ui/decorations/sand.png" id="5_ep4cq"]
+[ext_resource type="Texture2D" uid="uid://c5t25p7ix7283" path="res://assets/ui/decorations/shell-orange.png" id="6_8f6bq"]
 
 [node name="Trashpanel" type="Control" unique_id=1646379042]
 custom_minimum_size = Vector2(88, 47)
@@ -63,3 +65,47 @@ offset_right = 78.0
 offset_bottom = 33.0
 theme_override_font_sizes/font_size = 12
 text = "15 / 20"
+
+[node name="Control" type="Control" parent="." unique_id=256700108]
+custom_minimum_size = Vector2(88, 47)
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SandRight" type="TextureRect" parent="Control" unique_id=1587833228]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -11.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("5_ep4cq")
+
+[node name="SandLeft" type="TextureRect" parent="Control" unique_id=1475708524]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -11.0
+offset_right = 12.0
+grow_vertical = 0
+texture = ExtResource("5_ep4cq")
+flip_h = true
+
+[node name="ShellOrangeLeft" type="TextureRect" parent="Control" unique_id=1171745649]
+texture_filter = 1
+custom_minimum_size = Vector2(16, 14)
+layout_mode = 1
+offset_left = -6.0
+offset_top = -1.9999998
+offset_right = 10.0
+offset_bottom = 12.0
+mouse_filter = 2
+texture = ExtResource("6_8f6bq")
+stretch_mode = 3
