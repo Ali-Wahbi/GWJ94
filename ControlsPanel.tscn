@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://7nh73shol7lq"]
+
+[ext_resource type="Texture2D" uid="uid://bpdprsotx8bkc" path="res://assets/ui/controls-panel/controls-panel.png" id="1_prs5j"]
+[ext_resource type="Texture2D" uid="uid://dk2sdhr5ufnhe" path="res://assets/ui/controls-panel/controls-wasd.png" id="2_8hmnd"]
+[ext_resource type="Texture2D" uid="uid://e4vcp3t1ayt6" path="res://assets/ui/controls-panel/controls-mouse.png" id="3_xhts4"]
+
+[node name="ControlsPanel" type="Control" unique_id=354184040]
+custom_minimum_size = Vector2(73, 55)
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -55.0
+offset_right = 73.0
+grow_vertical = 0
+
+[node name="Background" type="TextureRect" parent="." unique_id=210612106]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_prs5j")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=578806127]
+texture_filter = 1
+custom_minimum_size = Vector2(25, 19)
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 32.0
+offset_bottom = 24.0
+texture = ExtResource("2_8hmnd")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1597874983]
+texture_filter = 1
+custom_minimum_size = Vector2(13, 21)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 29.0
+offset_right = 26.0
+offset_bottom = 50.0
+texture = ExtResource("3_xhts4")
