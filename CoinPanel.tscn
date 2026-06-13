@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://vss403w26sv7"]
+
+[ext_resource type="Texture2D" uid="uid://hl5p0txquv3c" path="res://assets/ui/coin-panel/ui-coin-panelpng.png" id="1_u8602"]
+[ext_resource type="Texture2D" uid="uid://lxmpvhkru6us" path="res://assets/ui/coin-panel/coin.png" id="2_app17"]
+
+[node name="CoinPanel" type="Control" unique_id=850425795]
+custom_minimum_size = Vector2(88, 40)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Background" type="TextureRect" parent="." unique_id=192873593]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_u8602")
+
+[node name="CoinIcon" type="TextureRect" parent="." unique_id=280341015]
+texture_filter = 1
+layout_mode = 0
+offset_left = -3.0
+offset_top = 7.0
+offset_right = 46.0
+offset_bottom = 34.0
+size_flags_vertical = 4
+texture = ExtResource("2_app17")
+stretch_mode = 5
+
+[node name="CoinText" type="Label" parent="." unique_id=702122665]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 5.0
+offset_right = 67.0
+offset_bottom = 17.0
+theme_override_font_sizes/font_size = 8
+text = "Coins:"
+
+[node name="CoinAmount" type="Label" parent="." unique_id=1960794661]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 16.0
+offset_right = 77.0
+offset_bottom = 33.0
+theme_override_font_sizes/font_size = 12
+text = "1.280"

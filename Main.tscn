@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://nq5weqkbj1jc"]
+
+[ext_resource type="PackedScene" uid="uid://vss403w26sv7" path="res://CoinPanel.tscn" id="1_glv2v"]
+
+[node name="Main" type="Node2D" unique_id=1273498054]
+
+[node name="CoinPanel" parent="." unique_id=850425795 instance=ExtResource("1_glv2v")]
+offset_right = 88.0
+offset_bottom = 40.0
