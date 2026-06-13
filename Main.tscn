@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://nq5weqkbj1jc"]
 
 [ext_resource type="PackedScene" uid="uid://vss403w26sv7" path="res://CoinPanel.tscn" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://dts7mrdb070kk" path="res://trashpanel.tscn" id="2_uu6xs"]
 
 [node name="Main" type="Node2D" unique_id=1273498054]
 
 [node name="CoinPanel" parent="." unique_id=850425795 instance=ExtResource("1_glv2v")]
-offset_right = 88.0
-offset_bottom = 40.0
+
+[node name="Trashpanel" parent="." unique_id=1646379042 instance=ExtResource("2_uu6xs")]
+offset_left = 480.0
+offset_right = 480.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=905111986]
+anchor_mode = 0
