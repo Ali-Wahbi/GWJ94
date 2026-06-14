@@ -37,6 +37,4 @@ public partial class UiManager : CanvasLayer
 	{
 		_trashPanel.UpdateTrashText(current, max);
 	}
-	
-	
 }
