@@ -1,12 +1,14 @@
 extends CharacterBody2D
 
 @onready var boatSprite: Sprite2D = $boatSprite
+@onready var collider: CollisionShape2D = $CollisionShape2D
+
 @export var movementSpeed: Vector2 = Vector2(300, 300)
 
 var upOrLeft = -1
 var downOrRight = 1
-var animationFrame = 0
-func _physics_process(delta: float) -> void:
+var animationFrame = 1
+func _physics_process(_delta: float) -> void:
 	# Up => 45 degrees 1,-1
 	# Down => 225 degrees -1,1
 	# Left => 135 degrees -1,-1
@@ -22,21 +24,25 @@ func _physics_process(delta: float) -> void:
 		directionX = 1
 		directionY = -1
 		animationFrame = 1
+		collider.rotation_degrees = 52.0
 	elif inputY == downOrRight:
 		# Down
 		directionX = -1
 		directionY = 1
 		animationFrame = 2
+		collider.rotation_degrees = 48.0
 	if inputX == upOrLeft:
 		# Left
 		directionX = -1
 		directionY = -1
 		animationFrame = 0
+		collider.rotation_degrees = -52.0
 	elif inputX == downOrRight:
 		# Right
 		directionX = 1
 		directionY = 1
 		animationFrame = 3
+		collider.rotation_degrees = -48.0
 			
 
 	if directionY:
