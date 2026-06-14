@@ -6,8 +6,8 @@ namespace GWJ94.scripts.autoload.ui;
 public partial class UiData : Node
 {
 	public static UiData Instance {get; private set;}
-	public Action<int> OnCoinUpdate;
-	public Action<int, int> OnTrashUpdate;
+	public event Action<int> OnCoinUpdate;
+	public event Action<int, int> OnTrashUpdate;
 	public int Coins { get; private set; } 
 	public int CurrentTrash { get; private set; } 
 	public int MaxTrash { get; private set; } 

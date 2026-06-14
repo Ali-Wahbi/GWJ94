@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dts7mrdb070kk"]
 
 [ext_resource type="Texture2D" uid="uid://yymbj7bv3dy1" path="res://assets/ui/trash-panel/trash-panel.png" id="1_4nwj1"]
+[ext_resource type="Script" uid="uid://cpk3periwhkna" path="res://scenes/ui/TrashPanel.cs" id="1_shwle"]
 [ext_resource type="Texture2D" uid="uid://ri2b45imm1kb" path="res://assets/ui/trash-panel/trash.png" id="2_ry10k"]
 [ext_resource type="Texture2D" uid="uid://dhd6c0wp3qgce" path="res://assets/ui/trash-panel/progress-bar-empty.png" id="3_8hbl0"]
 [ext_resource type="Texture2D" uid="uid://dip5uji40k104" path="res://assets/ui/trash-panel/trash-progress-barl.png" id="4_s04da"]
@@ -15,6 +16,7 @@ anchor_right = 1.0
 offset_left = -88.0
 offset_bottom = 47.0
 grow_horizontal = 0
+script = ExtResource("1_shwle")
 
 [node name="Background" type="TextureRect" parent="." unique_id=974691149]
 texture_filter = 1
@@ -36,7 +38,7 @@ offset_right = 36.0
 offset_bottom = 30.0
 texture = ExtResource("2_ry10k")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1599097993]
+[node name="ProgressBar" type="TextureProgressBar" parent="." unique_id=1599097993]
 texture_filter = 1
 layout_mode = 0
 offset_left = 11.0
@@ -47,7 +49,7 @@ value = 100.0
 texture_under = ExtResource("3_8hbl0")
 texture_progress = ExtResource("4_s04da")
 
-[node name="Label" type="Label" parent="." unique_id=1797774657]
+[node name="TrashLabel" type="Label" parent="." unique_id=1797774657]
 layout_mode = 0
 offset_left = 45.0
 offset_top = 6.0
@@ -56,7 +58,7 @@ offset_bottom = 18.0
 theme_override_font_sizes/font_size = 8
 text = "Trash"
 
-[node name="Label2" type="Label" parent="." unique_id=1682796031]
+[node name="TrashAmount" type="Label" parent="." unique_id=1682796031]
 layout_mode = 0
 offset_left = 38.0
 offset_top = 16.0

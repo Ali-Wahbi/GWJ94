@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://vss403w26sv7"]
 
+[ext_resource type="Script" uid="uid://crlyoxjytq42k" path="res://scripts/ui/CoinPanel.cs" id="1_ek1oc"]
 [ext_resource type="Texture2D" uid="uid://hl5p0txquv3c" path="res://assets/ui/coin-panel/ui-coin-panelpng.png" id="1_u8602"]
 [ext_resource type="Texture2D" uid="uid://lxmpvhkru6us" path="res://assets/ui/coin-panel/coin.png" id="2_app17"]
 
@@ -7,6 +8,7 @@
 custom_minimum_size = Vector2(80, 32)
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_ek1oc")
 
 [node name="Background" type="TextureRect" parent="." unique_id=192873593]
 texture_filter = 1
