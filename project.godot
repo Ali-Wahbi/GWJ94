@@ -12,7 +12,11 @@ config_version=5
 
 config/name="GWJ94"
 run/main_scene="uid://nq5weqkbj1jc"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.6", "C#", "Forward Plus")
+
+[autoload]
+
+UiData="*uid://b2mkd3v01qyqc"
 
 [display]
 
