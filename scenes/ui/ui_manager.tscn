@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://2n3q0hr3vn0i"]
+
+[ext_resource type="Script" uid="uid://sifmge8r7xax" path="res://scripts/autoload/ui/UiManager.cs" id="1_js4l8"]
+[ext_resource type="PackedScene" uid="uid://vss403w26sv7" path="res://scenes/ui/CoinPanel.tscn" id="2_61ox6"]
+[ext_resource type="PackedScene" uid="uid://dts7mrdb070kk" path="res://scenes/ui/trashpanel.tscn" id="3_yp0ob"]
+[ext_resource type="PackedScene" uid="uid://7nh73shol7lq" path="res://scenes/ui/ControlsPanel.tscn" id="4_ybivm"]
+
+[node name="UiManager" type="CanvasLayer" unique_id=945585937]
+script = ExtResource("1_js4l8")
+
+[node name="RootControl" type="Control" parent="." unique_id=1283643968]
+custom_minimum_size = Vector2(480, 270)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CoinPanel" parent="RootControl" unique_id=850425795 instance=ExtResource("2_61ox6")]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 88.0
+offset_bottom = 40.0
+
+[node name="TrashPanel" parent="RootControl" unique_id=1646379042 instance=ExtResource("3_yp0ob")]
+layout_direction = 2
+layout_mode = 1
+offset_left = -96.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 55.0
+
+[node name="ControlsPanel" parent="RootControl" unique_id=354184040 instance=ExtResource("4_ybivm")]
+layout_mode = 1
+offset_left = 8.0
+offset_top = -63.0
+offset_right = 81.0
+offset_bottom = -8.0

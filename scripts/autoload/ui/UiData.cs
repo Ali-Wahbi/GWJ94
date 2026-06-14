@@ -15,6 +15,10 @@ public partial class UiData : Node
 	public override void _Ready()
 	{
 		Instance = this;
+		if (Instance is null)
+		{
+			GD.PrintErr("UiData not found");
+		}
 	}
 
 	public void InitializeCoins(int value)

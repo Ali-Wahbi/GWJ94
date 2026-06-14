@@ -1,43 +1,10 @@
 [gd_scene format=3 uid="uid://nq5weqkbj1jc"]
 
-[ext_resource type="PackedScene" uid="uid://vss403w26sv7" path="res://scenes/ui/CoinPanel.tscn" id="1_glv2v"]
-[ext_resource type="PackedScene" uid="uid://dts7mrdb070kk" path="res://scenes/ui/trashpanel.tscn" id="2_uu6xs"]
-[ext_resource type="PackedScene" uid="uid://7nh73shol7lq" path="res://scenes/ui/ControlsPanel.tscn" id="3_r0du0"]
+[ext_resource type="PackedScene" uid="uid://2n3q0hr3vn0i" path="res://scenes/ui/ui_manager.tscn" id="1_glv2v"]
 
 [node name="Main" type="Node2D" unique_id=1273498054]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=905111986]
 anchor_mode = 0
 
-[node name="UI" type="CanvasLayer" parent="." unique_id=580026097]
-
-[node name="RootControl" type="Control" parent="UI" unique_id=437605053]
-custom_minimum_size = Vector2(480, 270)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="CoinPanel" parent="UI/RootControl" unique_id=850425795 instance=ExtResource("1_glv2v")]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 88.0
-offset_bottom = 40.0
-
-[node name="Trashpanel" parent="UI/RootControl" unique_id=1646379042 instance=ExtResource("2_uu6xs")]
-layout_direction = 2
-layout_mode = 1
-offset_left = -96.0
-offset_top = 8.0
-offset_right = -8.0
-offset_bottom = 55.0
-
-[node name="ControlsPanel" parent="UI/RootControl" unique_id=354184040 instance=ExtResource("3_r0du0")]
-layout_mode = 1
-offset_left = 8.0
-offset_top = -63.0
-offset_right = 81.0
-offset_bottom = -8.0
+[node name="UiManager" parent="." unique_id=945585937 instance=ExtResource("1_glv2v")]
