@@ -12,7 +12,7 @@ config_version=5
 
 config/name="GWJ94"
 run/main_scene="uid://nq5weqkbj1jc"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 
 [display]
 
@@ -59,4 +59,5 @@ MouseLeft={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

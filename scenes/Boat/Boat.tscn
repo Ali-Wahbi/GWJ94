@@ -1,3 +1,24 @@
 [gd_scene format=3 uid="uid://8qekgmitf7wp"]
 
+[ext_resource type="Texture2D" uid="uid://bfqlptxcbtbbd" path="res://assets/BoatAnimations/boat 4d-Sheet-2x2.png" id="1_rdqa2"]
+[ext_resource type="Script" uid="uid://cy1akmd00mx1m" path="res://scenes/Boat/CharacterMovement.gd" id="1_tb82t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rdqa2"]
+radius = 14.866069
+
 [node name="Node2D" type="Node2D" unique_id=1447350215]
+
+[node name="BoatBody" type="CharacterBody2D" parent="." unique_id=1829272761]
+position = Vector2(64, 39)
+motion_mode = 1
+script = ExtResource("1_tb82t")
+movementSpeed = Vector2(100, 50)
+
+[node name="boatSprite" type="Sprite2D" parent="BoatBody" unique_id=1180710030]
+texture = ExtResource("1_rdqa2")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoatBody" unique_id=170401499]
+shape = SubResource("CircleShape2D_rdqa2")
