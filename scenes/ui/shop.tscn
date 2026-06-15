@@ -9,10 +9,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -92.0
-offset_right = 48.0
-offset_bottom = 92.0
+offset_left = -73.5
+offset_top = -107.5
+offset_right = 73.5
+offset_bottom = 107.5
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -23,10 +23,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -48.0
+offset_left = -73.5
 offset_top = -92.0
-offset_right = 48.0
-offset_bottom = 92.0
+offset_right = 73.5
+offset_bottom = 123.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 0
@@ -37,15 +37,15 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 
 [node name="Shop" parent="MarginContainer/VBoxContainer" unique_id=1438484620 instance=ExtResource("1_fly8j")]
-custom_minimum_size = Vector2(100, 40)
+custom_minimum_size = Vector2(147, 54)
 layout_mode = 2
 
 [node name="Shop2" parent="MarginContainer/VBoxContainer" unique_id=208303280 instance=ExtResource("1_fly8j")]
-custom_minimum_size = Vector2(100, 40)
+custom_minimum_size = Vector2(147, 54)
 layout_mode = 2
 
 [node name="Shop3" parent="MarginContainer/VBoxContainer" unique_id=1898401241 instance=ExtResource("1_fly8j")]
-custom_minimum_size = Vector2(100, 40)
+custom_minimum_size = Vector2(147, 54)
 layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=93180475]
