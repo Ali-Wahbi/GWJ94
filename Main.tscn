@@ -1,12 +1,6 @@
 [gd_scene format=3 uid="uid://nq5weqkbj1jc"]
 
 [ext_resource type="PackedScene" uid="uid://2n3q0hr3vn0i" path="res://scenes/ui/ui_manager.tscn" id="1_glv2v"]
-[ext_resource type="Script" uid="uid://cybxfrxqff3t3" path="res://scripts/autoload/ui/ShopData.cs" id="2_uu6xs"]
-[ext_resource type="Script" uid="uid://bunea781jhva4" path="res://scripts/autoload/ui/ShopItemData.cs" id="3_r0du0"]
-
-[sub_resource type="Resource" id="Resource_r0du0"]
-script = ExtResource("3_r0du0")
-metadata/_custom_type_script = "uid://bunea781jhva4"
 
 [node name="Main" type="Node2D" unique_id=1273498054]
 
@@ -14,7 +8,3 @@ metadata/_custom_type_script = "uid://bunea781jhva4"
 anchor_mode = 0
 
 [node name="UiManager" parent="." unique_id=945585937 instance=ExtResource("1_glv2v")]
-
-[node name="Node2D" type="Node2D" parent="." unique_id=1498867409]
-script = ExtResource("2_uu6xs")
-Items = Array[ExtResource("3_r0du0")]([SubResource("Resource_r0du0")])

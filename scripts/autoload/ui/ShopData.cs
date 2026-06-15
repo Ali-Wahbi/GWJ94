@@ -15,4 +15,16 @@ public partial class ShopData : Node
 			GD.PrintErr("ShopManager not found");
 		}
 	}
+
+	public void HandleShopping(int coins)
+	{
+		var items = Items;
+		
+		foreach (var item in items)
+		{
+			int cost = item.Cost;
+			string name = item.Name;
+			string description = item.Description;
+		}
+	}
 }
