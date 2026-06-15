@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://crlyoxjytq42k" path="res://scripts/ui/CoinPanel.cs" id="1_ek1oc"]
 [ext_resource type="Texture2D" uid="uid://hl5p0txquv3c" path="res://assets/ui/coin-panel/ui-coin-panelpng.png" id="1_u8602"]
 [ext_resource type="Texture2D" uid="uid://lxmpvhkru6us" path="res://assets/ui/coin-panel/coin.png" id="2_app17"]
+[ext_resource type="FontFile" uid="uid://b7ek2m02pi6sg" path="res://assets/font/PublicPixel.otf" id="4_va68y"]
+[ext_resource type="FontFile" uid="uid://dh8g7w8ept17h" path="res://assets/font/PublicPixel.ttf" id="5_3kfln"]
 
 [node name="CoinPanel" type="Control" unique_id=850425795]
 custom_minimum_size = Vector2(80, 32)
@@ -34,19 +36,21 @@ stretch_mode = 3
 [node name="CoinText" type="Label" parent="." unique_id=702122665]
 texture_filter = 1
 layout_mode = 0
-offset_left = 43.0
-offset_top = 4.0
-offset_right = 61.0
-offset_bottom = 13.0
-theme_override_font_sizes/font_size = 6
-text = "Coins:"
+offset_left = 36.0
+offset_top = 7.0
+offset_right = 71.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("4_va68y")
+theme_override_font_sizes/font_size = 7
+text = "Coins"
 
 [node name="CoinAmount" type="Label" parent="." unique_id=1960794661]
 texture_filter = 1
 layout_mode = 0
-offset_left = 39.0
-offset_top = 11.0
-offset_right = 65.0
-offset_bottom = 25.0
-theme_override_font_sizes/font_size = 10
+offset_left = 33.0
+offset_top = 16.0
+offset_right = 73.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("5_3kfln")
+theme_override_font_sizes/font_size = 8
 text = "1.280"

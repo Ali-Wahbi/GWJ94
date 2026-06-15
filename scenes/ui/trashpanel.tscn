@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dhd6c0wp3qgce" path="res://assets/ui/trash-panel/progress-bar-empty.png" id="3_8hbl0"]
 [ext_resource type="Texture2D" uid="uid://dip5uji40k104" path="res://assets/ui/trash-panel/trash-progress-barl.png" id="4_s04da"]
 [ext_resource type="Texture2D" uid="uid://bipusb6abm43v" path="res://assets/ui/decorations/sand.png" id="5_ep4cq"]
+[ext_resource type="FontFile" uid="uid://b7ek2m02pi6sg" path="res://assets/font/PublicPixel.otf" id="6_jxvun"]
+[ext_resource type="FontFile" uid="uid://dh8g7w8ept17h" path="res://assets/font/PublicPixel.ttf" id="7_euugf"]
 
 [node name="Trashpanel" type="Control" unique_id=1646379042]
 custom_minimum_size = Vector2(88, 47)
@@ -51,21 +53,23 @@ texture_progress = ExtResource("4_s04da")
 
 [node name="TrashLabel" type="Label" parent="." unique_id=1797774657]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 6.0
-offset_right = 69.0
-offset_bottom = 18.0
+offset_left = 38.0
+offset_top = 9.0
+offset_right = 78.0
+offset_bottom = 21.0
+theme_override_fonts/font = ExtResource("6_jxvun")
 theme_override_font_sizes/font_size = 8
 text = "Trash"
 
 [node name="TrashAmount" type="Label" parent="." unique_id=1682796031]
 layout_mode = 0
-offset_left = 38.0
-offset_top = 16.0
-offset_right = 78.0
-offset_bottom = 33.0
-theme_override_font_sizes/font_size = 12
-text = "15 / 20"
+offset_left = 41.0
+offset_top = 20.0
+offset_right = 76.0
+offset_bottom = 27.0
+theme_override_fonts/font = ExtResource("7_euugf")
+theme_override_font_sizes/font_size = 7
+text = "15/20"
 
 [node name="Control" type="Control" parent="." unique_id=256700108]
 custom_minimum_size = Vector2(88, 47)

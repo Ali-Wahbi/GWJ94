@@ -69,9 +69,9 @@ stretch_mode = 0
 [node name="Cost" type="Label" parent="Background" unique_id=1364715016]
 layout_mode = 0
 offset_left = 128.5
-offset_top = 23.0
+offset_top = 24.0
 offset_right = 149.5
-offset_bottom = 30.0
+offset_bottom = 31.0
 theme_override_fonts/font = ExtResource("3_ue6x3")
 theme_override_font_sizes/font_size = 6
 text = "126"
