@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://dt4hksfp44ncx"]
 
-[ext_resource type="Texture2D" uid="uid://bdic1bgsgqduw" path="res://assets/ui/shop/shop-label.png" id="1_ahsc1"]
-[ext_resource type="Texture2D" uid="uid://c5t25p7ix7283" path="res://assets/ui/decorations/shell-orange.png" id="2_8v20v"]
-[ext_resource type="Texture2D" uid="uid://2ienfdx3oqjv" path="res://assets/ui/shop/shop-button.png" id="3_2i61c"]
+[ext_resource type="Texture2D" uid="uid://bdic1bgsgqduw" path="res://assets/ui/shop/shop-label.png" id="1_3ctxd"]
+[ext_resource type="Texture2D" uid="uid://c5t25p7ix7283" path="res://assets/ui/decorations/shell-orange.png" id="2_ue6x3"]
+[ext_resource type="Texture2D" uid="uid://cmlqe1nvuaxqv" path="res://assets/ui/shop/shop-button-completel.png" id="3_edrhq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ctxd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Shop" type="Control" unique_id=1438484620]
 layout_mode = 3
@@ -22,7 +25,7 @@ offset_right = 100.0
 offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_ahsc1")
+texture = ExtResource("1_3ctxd")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background" unique_id=1188910458]
 layout_mode = 1
@@ -47,10 +50,10 @@ custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_8v20v")
+texture = ExtResource("2_ue6x3")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="Background/MarginContainer/HBoxContainer" unique_id=1306373517]
+[node name="Description" type="Label" parent="Background/MarginContainer/HBoxContainer" unique_id=1306373517]
 layout_mode = 2
 theme_override_constants/line_spacing = -3
 theme_override_font_sizes/font_size = 6
@@ -59,6 +62,19 @@ trash
 capacity"
 
 [node name="Button" type="Button" parent="Background/MarginContainer/HBoxContainer" unique_id=13643225]
+custom_minimum_size = Vector2(26, 17)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
-icon = ExtResource("3_2i61c")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ctxd")
+icon = ExtResource("3_edrhq")
+
+[node name="Cost" type="Label" parent="Background" unique_id=1364715016]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 15.0
+offset_right = 87.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 6
+text = "126"
