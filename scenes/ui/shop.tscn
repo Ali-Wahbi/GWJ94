@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://df07f2ue1knu6"]
 
 [ext_resource type="PackedScene" uid="uid://dt4hksfp44ncx" path="res://scenes/ui/shop-item-sample.tscn" id="1_fly8j"]
+[ext_resource type="FontFile" uid="uid://b7ek2m02pi6sg" path="res://assets/font/PublicPixel.otf" id="2_8v20v"]
 
 [node name="Shop" type="Control" unique_id=1175435221]
 layout_mode = 3
@@ -37,20 +38,18 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 
 [node name="Shop" parent="MarginContainer/VBoxContainer" unique_id=1438484620 instance=ExtResource("1_fly8j")]
-custom_minimum_size = Vector2(147, 54)
 layout_mode = 2
 
 [node name="Shop2" parent="MarginContainer/VBoxContainer" unique_id=208303280 instance=ExtResource("1_fly8j")]
-custom_minimum_size = Vector2(147, 54)
 layout_mode = 2
 
 [node name="Shop3" parent="MarginContainer/VBoxContainer" unique_id=1898401241 instance=ExtResource("1_fly8j")]
-custom_minimum_size = Vector2(147, 54)
 layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=93180475]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_8v20v")
 theme_override_font_sizes/font_size = 12
 text = "Exit"

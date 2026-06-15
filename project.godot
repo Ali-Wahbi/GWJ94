@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 
 [autoload]
 
-UiData="*uid://b2mkd3v01qyqc"
+UiDatas="*uid://b2mkd3v01qyqc"
 
 [display]
 
@@ -39,4 +39,5 @@ theme/default_font_multichannel_signed_distance_field=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

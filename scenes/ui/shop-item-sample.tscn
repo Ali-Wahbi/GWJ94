@@ -32,30 +32,33 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 8
+theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 0
+theme_override_constants/margin_right = 7
 theme_override_constants/margin_bottom = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer" unique_id=2116810327]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
+theme_override_constants/separation = 2
 
 [node name="TextureRect" type="TextureRect" parent="Background/MarginContainer/HBoxContainer" unique_id=1724449056]
 texture_filter = 1
-custom_minimum_size = Vector2(24, 24)
+custom_minimum_size = Vector2(32, 28)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_ue6x3")
-expand_mode = 1
 
 [node name="Description" type="Label" parent="Background/MarginContainer/HBoxContainer" unique_id=1306373517]
 layout_mode = 2
-theme_override_constants/line_spacing = 0
+size_flags_horizontal = 4
+theme_override_constants/line_spacing = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_ue6x3")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 7
 text = "Increase 
 trash 
 capacity"
@@ -64,14 +67,16 @@ capacity"
 custom_minimum_size = Vector2(40, 20)
 layout_mode = 2
 texture_normal = ExtResource("3_edrhq")
-stretch_mode = 0
+stretch_mode = 5
 
 [node name="Cost" type="Label" parent="Background" unique_id=1364715016]
 layout_mode = 0
-offset_left = 128.5
+offset_left = 123.5
 offset_top = 24.0
-offset_right = 149.5
+offset_right = 144.5
 offset_bottom = 31.0
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("3_ue6x3")
 theme_override_font_sizes/font_size = 6
 text = "126"
