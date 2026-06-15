@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://8qekgmitf7wp" path="res://scenes/Boat/Boat.tscn" id="2_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://dts7mrdb070kk" path="res://scenes/ui/trashpanel.tscn" id="2_uu6xs"]
 [ext_resource type="PackedScene" uid="uid://7nh73shol7lq" path="res://scenes/ui/ControlsPanel.tscn" id="3_r0du0"]
+[ext_resource type="PackedScene" uid="uid://2n3q0hr3vn0i" path="res://scenes/ui/ui_manager.tscn" id="1_glv2v"]
 
 [node name="Main" type="Node2D" unique_id=1273498054]
 
@@ -45,3 +46,4 @@ offset_bottom = -8.0
 
 [node name="BoatBody" parent="." unique_id=1829272761 instance=ExtResource("2_cm0pq")]
 position = Vector2(202, 122)
+[node name="UiManager" parent="." unique_id=945585937 instance=ExtResource("1_glv2v")]
