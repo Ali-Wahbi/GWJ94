@@ -14,7 +14,7 @@ func _process(_delta):
 	
 
 func collectCoin(value: int) -> void:
-	# UiData.CollectCoins(value)
+	UiDatas.CollectCoins(value)
 	pass
 
 func updateUI() -> void:
