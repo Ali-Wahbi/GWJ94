@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bfqlptxcbtbbd" path="res://assets/BoatAnimations/boat 4d-Sheet-2x2.png" id="1_rdqa2"]
 [ext_resource type="Script" uid="uid://cy1akmd00mx1m" path="res://scenes/Boat/CharacterMovement.gd" id="1_tb82t"]
+[ext_resource type="Script" uid="uid://gmdiowfe8q40" path="res://scenes/Boat/coins_manager.gd" id="3_prkil"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tb82t"]
 radius = 11.959112
@@ -21,3 +22,6 @@ frame = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=170401499]
 rotation = 0.9075712
 shape = SubResource("CapsuleShape2D_tb82t")
+
+[node name="coinsCollector" type="Node2D" parent="." unique_id=1984732193]
+script = ExtResource("3_prkil")
