@@ -1,66 +1,46 @@
-[gd_scene format=3 uid="uid://dt4hksfp44ncx"]
+[gd_scene format=3 uid="uid://df07f2ue1knu6"]
 
-[ext_resource type="Texture2D" uid="uid://bdic1bgsgqduw" path="res://assets/ui/shop/shop-label.png" id="1_ahsc1"]
-[ext_resource type="Texture2D" uid="uid://c5t25p7ix7283" path="res://assets/ui/decorations/shell-orange.png" id="2_8v20v"]
-[ext_resource type="Texture2D" uid="uid://2ienfdx3oqjv" path="res://assets/ui/shop/shop-button.png" id="3_2i61c"]
+[ext_resource type="PackedScene" uid="uid://dt4hksfp44ncx" path="res://scenes/ui/shop-item-sample.tscn" id="1_fly8j"]
 
-[node name="Shop" type="Control" unique_id=1438484620]
+[node name="Shop" type="Control" unique_id=1175435221]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -92.0
+offset_right = 48.0
+offset_bottom = 92.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="." unique_id=1515300164]
-texture_filter = 1
-custom_minimum_size = Vector2(100, 40)
-layout_mode = 0
-offset_left = -50.0
-offset_top = -20.0
-offset_right = 50.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_ahsc1")
-
-[node name="MarginContainer" type="MarginContainer" parent="Background" unique_id=1188910458]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2052063491]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -92.0
+offset_right = 48.0
+offset_bottom = 92.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 6
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 6
-theme_override_constants/margin_bottom = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer" unique_id=2116810327]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2067864716]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
 
-[node name="TextureRect" type="TextureRect" parent="Background/MarginContainer/HBoxContainer" unique_id=1724449056]
-texture_filter = 1
-custom_minimum_size = Vector2(24, 24)
+[node name="Shop" parent="MarginContainer/VBoxContainer" unique_id=1438484620 instance=ExtResource("1_fly8j")]
+custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("2_8v20v")
-expand_mode = 1
 
-[node name="Label" type="Label" parent="Background/MarginContainer/HBoxContainer" unique_id=1306373517]
+[node name="Shop2" parent="MarginContainer/VBoxContainer" unique_id=208303280 instance=ExtResource("1_fly8j")]
+custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
-theme_override_constants/line_spacing = -3
-theme_override_font_sizes/font_size = 6
-text = "Increase 
-trash 
-capacity"
 
-[node name="Button" type="Button" parent="Background/MarginContainer/HBoxContainer" unique_id=13643225]
+[node name="Shop3" parent="MarginContainer/VBoxContainer" unique_id=1898401241 instance=ExtResource("1_fly8j")]
+custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
-icon = ExtResource("3_2i61c")

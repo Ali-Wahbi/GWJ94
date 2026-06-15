@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://vss403w26sv7" path="res://scenes/ui/CoinPanel.tscn" id="2_61ox6"]
 [ext_resource type="PackedScene" uid="uid://dts7mrdb070kk" path="res://scenes/ui/trashpanel.tscn" id="3_yp0ob"]
 [ext_resource type="PackedScene" uid="uid://7nh73shol7lq" path="res://scenes/ui/ControlsPanel.tscn" id="4_ybivm"]
+[ext_resource type="PackedScene" uid="uid://df07f2ue1knu6" path="res://scenes/ui/shop.tscn" id="5_61ox6"]
 
 [node name="UiManager" type="CanvasLayer" unique_id=945585937]
 script = ExtResource("1_js4l8")
@@ -38,3 +39,6 @@ offset_left = 8.0
 offset_top = -63.0
 offset_right = 81.0
 offset_bottom = -8.0
+
+[node name="Shop" parent="RootControl" unique_id=1175435221 instance=ExtResource("5_61ox6")]
+layout_mode = 1
