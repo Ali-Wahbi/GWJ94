@@ -10,6 +10,7 @@ public partial class UiManager : CanvasLayer
 	private UiData _uiData;
 	private CoinPanel _coinPanel;
 	private TrashPanel _trashPanel;
+	[Export] private Control _shop;
 
 	public override void _Ready()
 	{

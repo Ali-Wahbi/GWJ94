@@ -48,7 +48,6 @@ movementSpeed = Vector2(400, 50)
 [node name="Camera2D" type="Camera2D" parent="BoatBody" unique_id=905111986]
 
 [node name="UiManager" parent="." unique_id=945585937 instance=ExtResource("1_glv2v")]
-visible = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=213303445]
 visible = false

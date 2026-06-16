@@ -3,12 +3,13 @@ using GWJ94.scenes.ui;
 
 namespace GWJ94.scripts.autoload.ui;
 
-public partial class ShopManager : Node2D
+public partial class ShopManager : Control
 {
 	public ShopManager Instance {get; private set;}
 	[Export] public Godot.Collections.Array<ShopItemData> Items = new();
 	private UiData _uiData;
 	private TextureButton _buyButton;
+	private UiManager _uiManager;
 	override public void _Ready()
 	{
 		Instance = this;
@@ -17,6 +18,7 @@ public partial class ShopManager : Node2D
 			GD.PrintErr("ShopManager not found");
 		}
 		_uiData = UiData.Instance;
+		Visible = false;
 	}
 
 	public void TryBuy(ShopItemData item)
