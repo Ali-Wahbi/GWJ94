@@ -36,7 +36,7 @@ public partial class ShopManager : Control
 			GD.PrintErr("TryBuy index out of range");
 			GD.Print($"Index: {i}");
 		}
-		ShopItemData item = Items[i];
+		var item = Items[i];
 
 		if (item is null)
 		{
