@@ -1,16 +1,29 @@
 using Godot;
+using GWJ94.scenes.ui;
 
 namespace GWJ94.scripts.autoload.ui;
 
 public partial class ShopManager : Node2D
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
+	public ShopManager Instance {get; private set;}
+	[Export] public Godot.Collections.Array<ShopItemData> Items = new();
+	private UiData _uiData;
+	private TextureButton _buyButton;
+	override public void _Ready()
 	{
+		Instance = this;
+		if (Instance is null)
+		{
+			GD.PrintErr("ShopManager not found");
+		}
+		_uiData = UiData.Instance;
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	public void TryBuy(ShopItemData item)
 	{
+		foreach (var i in Items)
+		{
+			//if index is equal, hide
+		}
 	}
 }

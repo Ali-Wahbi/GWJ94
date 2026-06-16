@@ -8,7 +8,7 @@ public partial class UiData : Node
 	public static UiData Instance {get; private set;}
 	public event Action<int> OnCoinUpdate;
 	public event Action<int, int> OnTrashUpdate;
-	public int Coins { get; private set; } 
+	public int Coins { get; private set; } = 500;
 	public int CurrentTrash { get; private set; } 
 	public int MaxTrash { get; private set; } 
 
@@ -48,6 +48,17 @@ public partial class UiData : Node
 		}
 		Coins += value;
 		OnCoinUpdate?.Invoke(Coins);
+	}
+
+	public bool TrySpendCoins(int cost)
+	{
+		if (Coins < cost)
+		{
+			return false;
+		}
+		Coins -= cost;
+		OnCoinUpdate?.Invoke(Coins);
+		return true;
 	}
 
 	public void CollectTrash(int value)
