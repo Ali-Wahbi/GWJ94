@@ -5,12 +5,11 @@ namespace GWJ94.scripts.autoload.ui;
 
 public partial class ShopManager : Control
 {
-	public ShopManager Instance {get; private set;}
+	public static ShopManager Instance {get; private set;}
 	[Export] public Godot.Collections.Array<ShopItemData> Items = new();
 	private UiData _uiData;
-	private TextureButton _buyButton;
-	private UiManager _uiManager;
-	override public void _Ready()
+	
+	public override void _Ready()
 	{
 		Instance = this;
 		if (Instance is null)
@@ -18,14 +17,38 @@ public partial class ShopManager : Control
 			GD.PrintErr("ShopManager not found");
 		}
 		_uiData = UiData.Instance;
-		Visible = false;
+		
 	}
 
-	public void TryBuy(ShopItemData item)
+	public override void _ExitTree()
 	{
-		foreach (var i in Items)
+		if (Instance == this)
 		{
-			//if index is equal, hide
+			Instance = null;
 		}
+	}
+
+	public bool TryBuy(int index)
+	{
+		int i = index - 1;
+		if (i < 0 || i >= Items.Count)
+		{
+			GD.PrintErr("TryBuy index out of range");
+			GD.Print($"Index: {i}");
+		}
+		ShopItemData item = Items[i];
+
+		if (item is null)
+		{
+			return false;
+		}
+
+		if (!_uiData.TrySpendCoins(item.Cost))
+		{
+			return false;
+		}
+		
+		GD.Print($"{item.Name} bought!");
+		return true;
 	}
 }

@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 [autoload]
 
 UiDatas="*uid://b2mkd3v01qyqc"
+UiManager="*uid://2n3q0hr3vn0i"
 
 [display]
 

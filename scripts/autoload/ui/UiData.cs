@@ -20,6 +20,14 @@ public partial class UiData : Node
 			GD.PrintErr("UiData not found");
 		}
 	}
+	
+	public override void _ExitTree()
+	{
+		if (Instance == this)
+		{
+			Instance = null;
+		}
+	}
 
 	public void InitializeCoins(int value)
 	{

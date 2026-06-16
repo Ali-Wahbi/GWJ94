@@ -1,6 +1,6 @@
 using Godot;
 
-namespace GWJ94.scenes.ui;
+namespace GWJ94.scripts.ui;
 
 public partial class TrashPanel : Control
 {

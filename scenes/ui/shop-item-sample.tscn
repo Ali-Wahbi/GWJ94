@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cmlqe1nvuaxqv" path="res://assets/ui/shop/shop-button-completel.png" id="3_edrhq"]
 [ext_resource type="FontFile" uid="uid://dh8g7w8ept17h" path="res://assets/font/PublicPixel.ttf" id="3_ue6x3"]
 
-[node name="Shop" type="Control" unique_id=1438484620]
+[node name="ShopItem" type="Control" unique_id=1438484620]
 custom_minimum_size = Vector2(147, 54)
 layout_mode = 3
 anchors_preset = 8
@@ -17,6 +17,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_edrhq")
+ItemIndex = 1
 
 [node name="Background" type="TextureRect" parent="." unique_id=1515300164]
 texture_filter = 1
@@ -45,7 +46,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 4
 theme_override_constants/separation = 2
 
-[node name="TextureRect" type="TextureRect" parent="Background/MarginContainer/HBoxContainer" unique_id=1724449056]
+[node name="Icon" type="TextureRect" parent="Background/MarginContainer/HBoxContainer" unique_id=1724449056]
 texture_filter = 1
 custom_minimum_size = Vector2(32, 28)
 layout_mode = 2
@@ -65,7 +66,7 @@ text = "Increase
 trash 
 capacity"
 
-[node name="TextureButton" type="TextureButton" parent="Background/MarginContainer/HBoxContainer" unique_id=1528046890]
+[node name="BuyButton" type="TextureButton" parent="Background/MarginContainer/HBoxContainer" unique_id=1528046890]
 custom_minimum_size = Vector2(40, 20)
 layout_mode = 2
 texture_normal = ExtResource("3_edrhq")
