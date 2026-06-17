@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://dts7mrdb070kk"]
 
-[ext_resource type="Texture2D" uid="uid://yymbj7bv3dy1" path="res://assets/ui/trash-panel/trash-panel.png" id="1_4nwj1"]
 [ext_resource type="Script" uid="uid://cpk3periwhkna" path="res://scripts/ui/TrashPanel.cs" id="1_shwle"]
-[ext_resource type="Texture2D" uid="uid://ri2b45imm1kb" path="res://assets/ui/trash-panel/trash.png" id="2_ry10k"]
-[ext_resource type="Texture2D" uid="uid://dhd6c0wp3qgce" path="res://assets/ui/trash-panel/progress-bar-empty.png" id="3_8hbl0"]
-[ext_resource type="Texture2D" uid="uid://dip5uji40k104" path="res://assets/ui/trash-panel/trash-progress-barl.png" id="4_s04da"]
+[ext_resource type="Texture2D" uid="uid://dok55k6gx6xbw" path="res://assets/ui/v1/ui/trash/trash-panel-v1.png" id="2_s21v4"]
+[ext_resource type="Texture2D" uid="uid://bkc8roo7dxc3j" path="res://assets/ui/v1/ui/trash/progress-bar-empty.png" id="3_jxvun"]
+[ext_resource type="Texture2D" uid="uid://8n02ubqbovv" path="res://assets/ui/v1/ui/trash/progress-bar-inner.png" id="4_euugf"]
 [ext_resource type="Texture2D" uid="uid://bipusb6abm43v" path="res://assets/ui/decorations/sand.png" id="5_ep4cq"]
 [ext_resource type="FontFile" uid="uid://b7ek2m02pi6sg" path="res://assets/font/PublicPixel.otf" id="6_jxvun"]
 [ext_resource type="FontFile" uid="uid://dh8g7w8ept17h" path="res://assets/font/PublicPixel.ttf" id="7_euugf"]
@@ -19,7 +18,7 @@ offset_left = -88.0
 offset_bottom = 47.0
 grow_horizontal = 0
 script = ExtResource("1_shwle")
-_trashAmountLabel = NodePath("TrashAmount")
+_trashAmountLabel = NodePath("MarginContainer/VBoxContainer/TrashAmount")
 
 [node name="Background" type="TextureRect" parent="." unique_id=974691149]
 texture_filter = 1
@@ -30,47 +29,19 @@ anchor_right = 1.0
 offset_left = -40.0
 offset_bottom = 40.0
 grow_horizontal = 0
-texture = ExtResource("1_4nwj1")
-
-[node name="Trash" type="TextureRect" parent="." unique_id=240201128]
-texture_filter = 1
-layout_mode = 0
-offset_left = 10.0
-offset_top = 5.0
-offset_right = 36.0
-offset_bottom = 30.0
-texture = ExtResource("2_ry10k")
+texture = ExtResource("2_s21v4")
 
 [node name="ProgressBar" type="TextureProgressBar" parent="." unique_id=1599097993]
 texture_filter = 1
 layout_mode = 0
-offset_left = 11.0
-offset_top = 32.0
-offset_right = 77.0
-offset_bottom = 40.0
+offset_left = -23.0
+offset_top = 40.0
+offset_right = 43.0
+offset_bottom = 48.0
+scale = Vector2(1.44, 1)
 value = 100.0
-texture_under = ExtResource("3_8hbl0")
-texture_progress = ExtResource("4_s04da")
-
-[node name="TrashLabel" type="Label" parent="." unique_id=1797774657]
-layout_mode = 0
-offset_left = 38.0
-offset_top = 9.0
-offset_right = 78.0
-offset_bottom = 21.0
-theme_override_fonts/font = ExtResource("6_jxvun")
-theme_override_font_sizes/font_size = 8
-text = "Trash"
-
-[node name="TrashAmount" type="Label" parent="." unique_id=1682796031]
-layout_mode = 0
-offset_left = 41.0
-offset_top = 20.0
-offset_right = 76.0
-offset_bottom = 27.0
-theme_override_fonts/font = ExtResource("7_euugf")
-theme_override_font_sizes/font_size = 7
-text = "15/20"
+texture_under = ExtResource("3_jxvun")
+texture_progress = ExtResource("4_euugf")
 
 [node name="Control" type="Control" parent="." unique_id=256700108]
 custom_minimum_size = Vector2(88, 47)
@@ -87,7 +58,8 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -12.0
-offset_top = -11.0
+offset_top = -2.0
+offset_bottom = 9.0
 grow_horizontal = 0
 grow_vertical = 0
 texture = ExtResource("5_ep4cq")
@@ -98,8 +70,37 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -11.0
-offset_right = 12.0
+offset_left = -40.0
+offset_top = -2.0
+offset_right = -28.0
+offset_bottom = 9.0
 grow_vertical = 0
 texture = ExtResource("5_ep4cq")
 flip_h = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1468964287]
+layout_mode = 0
+offset_left = 3.000001
+offset_top = 3.0
+offset_right = 58.0
+offset_bottom = 43.0
+scale = Vector2(1.4399903, 1.0399995)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1144084387]
+layout_mode = 2
+alignment = 1
+
+[node name="TrashLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1797774657]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_jxvun")
+theme_override_font_sizes/font_size = 11
+text = "Trash"
+horizontal_alignment = 1
+
+[node name="TrashAmount" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1682796031]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_euugf")
+theme_override_font_sizes/font_size = 7
+text = "15/20"
+horizontal_alignment = 1
+vertical_alignment = 1
