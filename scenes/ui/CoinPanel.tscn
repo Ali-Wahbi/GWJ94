@@ -6,11 +6,12 @@
 [ext_resource type="FontFile" uid="uid://b7ek2m02pi6sg" path="res://assets/font/PublicPixel.otf" id="4_va68y"]
 [ext_resource type="FontFile" uid="uid://dh8g7w8ept17h" path="res://assets/font/PublicPixel.ttf" id="5_3kfln"]
 
-[node name="CoinPanel" type="Control" unique_id=850425795]
+[node name="CoinPanel" type="Control" unique_id=850425795 node_paths=PackedStringArray("_coinAmountLabel")]
 custom_minimum_size = Vector2(80, 32)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_ek1oc")
+_coinAmountLabel = NodePath("CoinAmount")
 
 [node name="Background" type="TextureRect" parent="." unique_id=192873593]
 texture_filter = 1

@@ -41,6 +41,12 @@ public partial class UiManager : CanvasLayer
 		}
 	}
 
+	public override void _Process(double delta)
+	{
+		UpdateCoinPanel(_uiData.Coins);
+		UpdateTrashPanel(_uiData.CurrentTrash, _uiData.MaxTrash);
+	}
+
 	private void UpdateCoinPanel(int value)
 	{
 		_coinPanel.UpdateCoinText(value);

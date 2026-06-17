@@ -9,8 +9,8 @@ public partial class UiData : Node
 	public event Action<int> OnCoinUpdate;
 	public event Action<int, int> OnTrashUpdate;
 	public int Coins { get; private set; } = 500;
-	public int CurrentTrash { get; private set; } 
-	public int MaxTrash { get; private set; } 
+	public int CurrentTrash { get; private set; } = 100;
+	public int MaxTrash { get; private set; } = 200;
 
 	public override void _Ready()
 	{

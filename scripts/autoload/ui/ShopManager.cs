@@ -39,6 +39,7 @@ public partial class ShopManager : Control
 		{
 			GD.PrintErr("TryBuy index out of range");
 			GD.Print($"Index: {i}");
+			return false;
 		}
 		var item = Items[i];
 
@@ -58,6 +59,6 @@ public partial class ShopManager : Control
 	
 	private void ExitButtonPressed()
 	{
-		_shopPanel.Visible = false;
+		_shopPanel.Hide();
 	}
 }

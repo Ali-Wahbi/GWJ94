@@ -9,7 +9,7 @@
 [ext_resource type="FontFile" uid="uid://b7ek2m02pi6sg" path="res://assets/font/PublicPixel.otf" id="6_jxvun"]
 [ext_resource type="FontFile" uid="uid://dh8g7w8ept17h" path="res://assets/font/PublicPixel.ttf" id="7_euugf"]
 
-[node name="Trashpanel" type="Control" unique_id=1646379042]
+[node name="Trashpanel" type="Control" unique_id=1646379042 node_paths=PackedStringArray("_trashAmountLabel")]
 custom_minimum_size = Vector2(88, 47)
 layout_mode = 3
 anchors_preset = 1
@@ -19,6 +19,7 @@ offset_left = -88.0
 offset_bottom = 47.0
 grow_horizontal = 0
 script = ExtResource("1_shwle")
+_trashAmountLabel = NodePath("TrashAmount")
 
 [node name="Background" type="TextureRect" parent="." unique_id=974691149]
 texture_filter = 1
