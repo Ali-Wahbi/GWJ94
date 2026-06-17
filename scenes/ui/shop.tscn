@@ -12,7 +12,7 @@ Name = "MoreCoins"
 Description = "coins rate update"
 metadata/_custom_type_script = "uid://bunea781jhva4"
 
-[node name="ShopPanel" type="Control" unique_id=1175435221]
+[node name="ShopPanel" type="Control" unique_id=1175435221 node_paths=PackedStringArray("_shopPanel", "_exitButton")]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -27,6 +27,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_85p0y")
 Items = Array[ExtResource("2_kdvrj")]([SubResource("Resource_atewb")])
+_shopPanel = NodePath(".")
+_exitButton = NodePath("MarginContainer/VBoxContainer/ExitButton")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2052063491]
 layout_mode = 1
@@ -57,7 +59,7 @@ layout_mode = 2
 [node name="Shop3" parent="MarginContainer/VBoxContainer" unique_id=1898401241 instance=ExtResource("1_fly8j")]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=93180475]
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=93180475]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

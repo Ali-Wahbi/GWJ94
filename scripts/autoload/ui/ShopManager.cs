@@ -8,6 +8,8 @@ public partial class ShopManager : Control
 	public static ShopManager Instance {get; private set;}
 	[Export] public Godot.Collections.Array<ShopItemData> Items = new();
 	private UiData _uiData;
+	[Export] Control _shopPanel;
+	[Export] private Button _exitButton;
 	
 	public override void _Ready()
 	{
@@ -17,11 +19,13 @@ public partial class ShopManager : Control
 			GD.PrintErr("ShopManager not found");
 		}
 		_uiData = UiData.Instance;
-		
+		_exitButton.Pressed += ExitButtonPressed;
 	}
 
 	public override void _ExitTree()
 	{
+		_exitButton.Pressed -= ExitButtonPressed;
+		
 		if (Instance == this)
 		{
 			Instance = null;
@@ -50,5 +54,10 @@ public partial class ShopManager : Control
 		
 		GD.Print($"{item.Name} bought!");
 		return true;
+	}
+	
+	private void ExitButtonPressed()
+	{
+		_shopPanel.Visible = false;
 	}
 }

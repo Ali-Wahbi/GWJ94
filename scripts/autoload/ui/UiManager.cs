@@ -9,8 +9,8 @@ public partial class UiManager : CanvasLayer
 {
 	private static UiManager _instance { get; set; }
 	private UiData _uiData;
-	private CoinPanel _coinPanel;
-	private TrashPanel _trashPanel;
+	[Export] private CoinPanel _coinPanel;
+	[Export] private TrashPanel _trashPanel;
 	[Export] private Control _shop;
 
 	public override void _Ready()
@@ -25,9 +25,6 @@ public partial class UiManager : CanvasLayer
 		_uiData = UiData.Instance;
 		_uiData.OnCoinUpdate += UpdateCoinPanel;
 		_uiData.OnTrashUpdate += UpdateTrashPanel;
-		
-		_coinPanel = GetNode<CoinPanel>("RootControl/CoinPanel");
-		_trashPanel = GetNode<TrashPanel>("RootControl/TrashPanel");
 	}
 
 	public override void _ExitTree()
