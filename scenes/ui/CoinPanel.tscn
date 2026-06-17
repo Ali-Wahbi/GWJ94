@@ -6,9 +6,11 @@
 [ext_resource type="FontFile" uid="uid://dh8g7w8ept17h" path="res://assets/font/PublicPixel.ttf" id="5_3kfln"]
 
 [node name="CoinPanel" type="Control" unique_id=850425795 node_paths=PackedStringArray("_coinAmountLabel")]
-custom_minimum_size = Vector2(80, 32)
+custom_minimum_size = Vector2(128, 48)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 128.0
+offset_bottom = 48.0
 script = ExtResource("1_ek1oc")
 _coinAmountLabel = NodePath("CoinAmount")
 
@@ -40,3 +42,4 @@ offset_bottom = 36.0
 theme_override_fonts/font = ExtResource("5_3kfln")
 theme_override_font_sizes/font_size = 10
 text = "1.280"
+horizontal_alignment = 1

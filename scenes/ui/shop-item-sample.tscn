@@ -1,32 +1,27 @@
 [gd_scene format=3 uid="uid://dt4hksfp44ncx"]
 
-[ext_resource type="Texture2D" uid="uid://bdic1bgsgqduw" path="res://assets/ui/shop/shop-label.png" id="1_3ctxd"]
 [ext_resource type="Script" uid="uid://batbdfwpsoqog" path="res://scenes/ui/ShopPanel.cs" id="1_edrhq"]
+[ext_resource type="Texture2D" uid="uid://672kqmuj3bey" path="res://assets/ui/v1/ui/shop/shop-panel-v1.png" id="2_edrhq"]
 [ext_resource type="Texture2D" uid="uid://c5t25p7ix7283" path="res://assets/ui/decorations/shell-orange.png" id="2_ue6x3"]
-[ext_resource type="Texture2D" uid="uid://cmlqe1nvuaxqv" path="res://assets/ui/shop/shop-button-completel.png" id="3_edrhq"]
 [ext_resource type="FontFile" uid="uid://dh8g7w8ept17h" path="res://assets/font/PublicPixel.ttf" id="3_ue6x3"]
+[ext_resource type="Texture2D" uid="uid://cdrei5drkjxhf" path="res://assets/ui/v1/ui/shop/shop-button-completel.png" id="5_tk2bj"]
 
 [node name="ShopItem" type="Control" unique_id=1438484620]
-custom_minimum_size = Vector2(147, 54)
+custom_minimum_size = Vector2(160, 64)
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 160.0
+offset_bottom = 64.0
 script = ExtResource("1_edrhq")
 ItemIndex = 1
 
 [node name="Background" type="TextureRect" parent="." unique_id=1515300164]
 texture_filter = 1
-custom_minimum_size = Vector2(147, 54)
+custom_minimum_size = Vector2(160, 64)
 layout_mode = 0
-offset_left = -3.0
-offset_right = 155.0
-offset_bottom = 55.0
-texture = ExtResource("1_3ctxd")
+offset_right = 160.0
+offset_bottom = 64.0
+texture = ExtResource("2_edrhq")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background" unique_id=1188910458]
 layout_mode = 1
@@ -44,7 +39,7 @@ theme_override_constants/margin_bottom = 0
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
-theme_override_constants/separation = 2
+theme_override_constants/separation = 3
 
 [node name="Icon" type="TextureRect" parent="Background/MarginContainer/HBoxContainer" unique_id=1724449056]
 texture_filter = 1
@@ -69,15 +64,15 @@ capacity"
 [node name="BuyButton" type="TextureButton" parent="Background/MarginContainer/HBoxContainer" unique_id=1528046890]
 custom_minimum_size = Vector2(40, 20)
 layout_mode = 2
-texture_normal = ExtResource("3_edrhq")
+texture_normal = ExtResource("5_tk2bj")
 stretch_mode = 5
 
 [node name="Cost" type="Label" parent="Background" unique_id=1364715016]
 layout_mode = 0
-offset_left = 123.5
-offset_top = 24.0
-offset_right = 144.5
-offset_bottom = 31.0
+offset_left = 128.0
+offset_top = 29.0
+offset_right = 149.0
+offset_bottom = 36.0
 theme_override_constants/line_spacing = 0
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("3_ue6x3")
