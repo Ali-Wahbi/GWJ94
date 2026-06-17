@@ -92,6 +92,7 @@ alignment = 1
 
 [node name="TrashLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1797774657]
 layout_mode = 2
+theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("6_jxvun")
 theme_override_font_sizes/font_size = 11
 text = "Trash"
@@ -99,6 +100,7 @@ horizontal_alignment = 1
 
 [node name="TrashAmount" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1682796031]
 layout_mode = 2
+theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("7_euugf")
 theme_override_font_sizes/font_size = 7
 text = "15/20"

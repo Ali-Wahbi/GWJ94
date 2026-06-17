@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://7nh73shol7lq"]
 
-[ext_resource type="Texture2D" uid="uid://bpdprsotx8bkc" path="res://assets/ui/controls-panel/controls-panel.png" id="1_prs5j"]
+[ext_resource type="Texture2D" uid="uid://dljcfnjd2pec1" path="res://assets/ui/v1/ui/controls/controls-panel.png" id="1_mfdy0"]
 [ext_resource type="Texture2D" uid="uid://dk2sdhr5ufnhe" path="res://assets/ui/controls-panel/controls-wasd.png" id="2_8hmnd"]
 [ext_resource type="Texture2D" uid="uid://e4vcp3t1ayt6" path="res://assets/ui/controls-panel/controls-mouse.png" id="3_xhts4"]
+[ext_resource type="FontFile" uid="uid://dh8g7w8ept17h" path="res://assets/font/PublicPixel.ttf" id="4_lyx87"]
+[ext_resource type="FontFile" uid="uid://b7ek2m02pi6sg" path="res://assets/font/PublicPixel.otf" id="5_lyx87"]
 
 [node name="ControlsPanel" type="Control" unique_id=354184040]
 custom_minimum_size = Vector2(73, 55)
@@ -11,7 +13,7 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -55.0
-offset_right = 73.0
+offset_right = 89.0
 grow_vertical = 0
 
 [node name="Background" type="TextureRect" parent="." unique_id=210612106]
@@ -19,7 +21,8 @@ texture_filter = 1
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_prs5j")
+scale = Vector2(1.2237676, 1)
+texture = ExtResource("1_mfdy0")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=578806127]
 texture_filter = 1
@@ -40,3 +43,31 @@ offset_top = 29.0
 offset_right = 26.0
 offset_bottom = 50.0
 texture = ExtResource("3_xhts4")
+
+[node name="MoveLabel" type="Label" parent="." unique_id=177352926]
+layout_mode = 0
+offset_left = 28.000002
+offset_top = 7.0
+offset_right = 109.57895
+offset_bottom = 30.0
+scale = Vector2(0.76, 0.76)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_lyx87")
+theme_override_font_sizes/font_size = 14
+text = "Move"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollectLabel" type="Label" parent="." unique_id=1561284551]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 29.0
+offset_right = 118.0
+offset_bottom = 52.0
+scale = Vector2(0.76, 0.76)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_lyx87")
+theme_override_font_sizes/font_size = 10
+text = "Collect"
+horizontal_alignment = 1
+vertical_alignment = 1
