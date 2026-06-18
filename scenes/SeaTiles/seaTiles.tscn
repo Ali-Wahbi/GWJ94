@@ -1,0 +1,53 @@
+[gd_scene format=4 uid="uid://dud4bn73tvjlw"]
+
+[ext_resource type="Texture2D" uid="uid://bl714csvvp57g" path="res://scenes/SeaTiles/Rocks.png" id="1_cqpyj"]
+[ext_resource type="Texture2D" uid="uid://dsjy2s3w1gt6u" path="res://scenes/SeaTiles/waterWave 5x6 .png" id="2_o7f3i"]
+[ext_resource type="Script" uid="uid://cmwxba054gat7" path="res://scripts/SeaTiles/sea_tile_map_layer.gd" id="3_22nx6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lgr22"]
+texture = ExtResource("1_cqpyj")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(11.241173, -1.6187286, 12.140465, 8.273502, -14.298767, 6.2950554, -10.341875, -3.956891, 0.08993149, -3.956891)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(6.384987, -2.1583042, 9.982162, 10.07209, -11.06131, 10.07209, -8.723146, -1.6187286)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cm0pq"]
+texture = ExtResource("2_o7f3i")
+texture_region_size = Vector2i(32, 32)
+0:0/animation_columns = 5
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 0.2
+0:0/animation_frame_1/duration = 0.2
+0:0/animation_frame_2/duration = 0.2
+0:0/animation_frame_3/duration = 0.2
+0:0/animation_frame_4/duration = 0.2
+0:0/animation_frame_5/duration = 0.2
+0:0/animation_frame_6/duration = 0.2
+0:0/animation_frame_7/duration = 0.2
+0:0/animation_frame_8/duration = 0.2
+0:0/animation_frame_9/duration = 0.2
+0:0/animation_frame_10/duration = 5.0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3dxm6"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_cm0pq")
+sources/1 = SubResource("TileSetAtlasSource_lgr22")
+
+[node name="TileMapLayer" type="TileMapLayer" unique_id=1276742153]
+z_index = -1
+tile_map_data = PackedByteArray("AAD8//z/AgAAAAAAAAD8//3/AgAAAAAAAAD8//7/AgAAAAAAAAD8////AgAAAAAAAAD8/wAAAgAAAAAAAAD8/wEAAgAAAAAAAAD8/wIAAgAAAAAAAAD8/wMAAgAAAAAAAAD9//z/AgAAAAAAAAD9//3/AgAAAAAAAAD9//7/AgAAAAAAAAD9////AgAAAAAAAAD9/wAAAgAAAAAAAAD9/wEAAgAAAAAAAAD9/wIAAgAAAAAAAAD9/wMAAgAAAAAAAAD+//z/AgAAAAAAAAD+//3/AgAAAAAAAAD+//7/AgAAAAAAAAD+////AgAAAAAAAAD+/wAAAgAAAAAAAAD+/wEAAgAAAAAAAAD+/wIAAgAAAAAAAAD+/wMAAgAAAAAAAAD///z/AgAAAAAAAAD///3/AgAAAAAAAAD///7/AgAAAAAAAAD/////AgAAAAAAAAD//wAAAgAAAAAAAAD//wEAAgAAAAAAAAD//wIAAgAAAAAAAAD//wMAAgAAAAAAAAAAAPz/AgAAAAAAAAAAAP3/AgAAAAAAAAAAAP7/AgAAAAAAAAAAAP//AgAAAAAAAAAAAAAAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAMAAgAAAAAAAAABAPz/AgAAAAAAAAABAP3/AgAAAAAAAAABAP7/AgAAAAAAAAABAP//AgAAAAAAAAABAAAAAgAAAAAAAAABAAEAAgAAAAAAAAABAAIAAgAAAAAAAAABAAMAAgAAAAAAAAACAPz/AgAAAAAAAAACAP3/AgAAAAAAAAACAP7/AgAAAAAAAAACAP//AgAAAAAAAAACAAAAAgAAAAAAAAACAAEAAgAAAAAAAAACAAIAAgAAAAAAAAACAAMAAgAAAAAAAAADAPz/AgAAAAAAAAADAP3/AgAAAAAAAAADAP7/AgAAAAAAAAADAP//AgAAAAAAAAADAAAAAgAAAAAAAAADAAEAAgAAAAAAAAADAAIAAgAAAAAAAAADAAMAAgAAAAAAAAA=")
+tile_set = SubResource("TileSet_3dxm6")
+script = ExtResource("3_22nx6")
+gridSize = Vector2i(50, 50)
+extraOffset = 8
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1975402281]
+visible = false
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 7.0
+offset_bottom = 6.0
+color = Color(1, 0, 0, 1)
