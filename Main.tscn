@@ -4,12 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://8qekgmitf7wp" path="res://scenes/Boat/Boat.tscn" id="2_cm0pq"]
 [ext_resource type="SpriteFrames" uid="uid://5awku7avdq6n" path="res://scenes/SeaTiles/WaterRipple.tres" id="3_r0du0"]
 [ext_resource type="PackedScene" uid="uid://dud4bn73tvjlw" path="res://scenes/SeaTiles/seaTiles.tscn" id="4_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://kko6oxogq6jh" path="res://scenes/SeaTrash/trash_object.tscn" id="5_fos0i"]
 
 [node name="Main" type="Node2D" unique_id=1273498054]
 
 [node name="BoatBody" parent="." unique_id=1829272761 instance=ExtResource("2_cm0pq")]
 position = Vector2(202, 122)
-movementSpeed = Vector2(400, 50)
+movementSpeed = Vector2(150, 50)
 
 [node name="Camera2D" type="Camera2D" parent="BoatBody" unique_id=905111986]
 
@@ -24,3 +25,18 @@ frame = 11
 frame_progress = 1.0
 
 [node name="TileMapLayer" parent="." unique_id=1276742153 instance=ExtResource("4_cm0pq")]
+
+[node name="TrashObject" parent="." unique_id=274267921 instance=ExtResource("5_fos0i")]
+position = Vector2(73.05423, 90.69463)
+
+[node name="TrashObject2" parent="." unique_id=508834331 instance=ExtResource("5_fos0i")]
+position = Vector2(52, 48)
+type = 5
+
+[node name="TrashObject3" parent="." unique_id=469445304 instance=ExtResource("5_fos0i")]
+position = Vector2(118, 17)
+type = 10
+
+[node name="TrashObject4" parent="." unique_id=351100183 instance=ExtResource("5_fos0i")]
+position = Vector2(148, 117)
+type = 14

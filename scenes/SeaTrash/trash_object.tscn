@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://kko6oxogq6jh"]
+
+[ext_resource type="Script" uid="uid://u6cwb617ipt5" path="res://scenes/SeaTrash/trash_object.gd" id="1_a0088"]
+[ext_resource type="Texture2D" uid="uid://cu46a2xkdr6ol" path="res://scenes/SeaTrash/ItemsCollection 5x3.png" id="2_874b1"]
+[ext_resource type="SpriteFrames" uid="uid://5awku7avdq6n" path="res://scenes/SeaTiles/WaterRipple.tres" id="3_ayomm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k58o3"]
+radius = 18.0
+
+[node name="TrashObject" type="RigidBody2D" unique_id=383441264]
+mass = 0.001
+gravity_scale = 0.0
+freeze = true
+script = ExtResource("1_a0088")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=646763770]
+shape = SubResource("CircleShape2D_k58o3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=79414138]
+texture = ExtResource("2_874b1")
+hframes = 5
+vframes = 3
+
+[node name="WaterRipple" type="AnimatedSprite2D" parent="." unique_id=1692102989]
+visible = false
+sprite_frames = ExtResource("3_ayomm")
