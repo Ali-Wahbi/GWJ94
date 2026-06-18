@@ -10,8 +10,8 @@ radius = 18.0
 [node name="TrashObject" type="RigidBody2D" unique_id=383441264]
 mass = 0.001
 gravity_scale = 0.0
-freeze = true
 script = ExtResource("1_a0088")
+moveSpeed = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=646763770]
 shape = SubResource("CircleShape2D_k58o3")
